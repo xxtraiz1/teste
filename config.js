@@ -1,10 +1,10 @@
 var config = {
 	polling_interval : 50,
-	db: 'csgolynx',
-	host: 'mysql669.umbler.com',
-	user: 'dante3556',
-	port: '41890',
-	password: 'Joao3556',
+	db: '',
+	host: '',
+	user: '',
+	port: '',
+	password: '',
 
 	admin: '76561198071550434',
 	

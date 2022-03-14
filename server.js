@@ -22,13 +22,13 @@ const manager = new TradeOfferManager({
 	language: 'en'
 });
 
-const two_factor_identity = ""; // PUT TWO_FACTOR_SECRET HERE
-const two_factor_secret = ""; // PUT TWO_FACTOR_SECRET HERE
+const shared_secret = ""; // SHARED_SECRET, pegue no .maFile
+const identity_secret = ""; // INDENTITY_SECRET, pegue no .maFile
 
 const logInOptions = {
-	accountName: '',
-	password: '',
-	twoFactorCode: SteamTotp.generateAuthCode(two_factor_identity)
+	accountName: '', // USER DA CONTA STEAM
+	password: '', // SERNHA DA CONTA STEAM
+	twoFactorCode: SteamTotp.generateAuthCode(shared_secret)
 };
 
 client.logOn(logInOptions);
@@ -642,7 +642,7 @@ io.on('connection', function(socket) {
 								// We need to confirm it
 								console.log('CONFIRM THIS ');
 								console.log(`Offer #${offer.id} sent, but requires confirmation`);
-								community.acceptConfirmationForObject(two_factor_secret, offer.id, function(err) {
+								community.acceptConfirmationForObject(identity_secret, offer.id, function(err) {
 									if (err) {
 										console.log(err);
 									}

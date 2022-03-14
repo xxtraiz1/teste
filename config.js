@@ -1,14 +1,14 @@
 var config = {
 	polling_interval : 50,
-	db: '',
-	host: '',
-	user: '',
-	port: '',
-	password: '',
+	db: 'maluk',
+	host: 'mysql995.umbler.com',
+	user: 'budinha',
+	port: '41890',
+	password: '150799aa',
 
-	admin: '76561198071550434',
+	admin: '76561199115006594',
 	
-	manager_domain: 'csgolynx.com',
+	manager_domain: 'maluk.xyz',
 	manager_lang: 'en',
 	manager_cancelTime: 60000,
 
